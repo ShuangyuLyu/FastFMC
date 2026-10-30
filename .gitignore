@@ -1,0 +1,9 @@
+target/
+__pycache__/
+*.pyc
+.DS_Store
+*.nnf
+*.out
+*.mc
+FastFMC-eval/results/*
+!FastFMC-eval/results/.gitkeep

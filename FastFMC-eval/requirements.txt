@@ -1,0 +1,3 @@
+# analysis scripts only (the experiment pipeline itself needs just the stdlib)
+PyYAML>=6.0      # scripts/run/er_pipeline.py
+scipy>=1.9       # all scripts in scripts/analysis/

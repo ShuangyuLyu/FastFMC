@@ -1,0 +1,26 @@
+# FastFMC-eval experiment configuration
+benchmarks: ../benchmarks/all   # symlink or copy of the 1,856 CNF models
+queries: ../benchmarks/queries          # the 1,856 query files used by the paper (committed)
+output: experimental_results
+fm_manifest: ../benchmarks/cnf.rar
+cutoff: 1800                   # seconds per benchmark (2x for PAR-2 penalty)
+
+tools:
+  FastFMC:
+    fastfmc: ../FastFMC/FastFMC/target/release/FastFMC
+    d4v2: ../FastFMC/tools/d4v2
+    coprocessor: ../FastFMC/tools/coprocessor
+  ddnnife:
+    ddnnife: solvers/ddnnife
+    d4v2: ../FastFMC/tools/d4v2
+  d4-query:
+    d4v2: ../FastFMC/tools/d4v2
+  query-ddnnf:
+    c2d: solvers/c2d           # not redistributable; obtain separately
+    querydnnf: solvers/query-dnnf
+  Ganak:
+    bin: solvers/ganak
+  sharpSAT:
+    bin: solvers/sharpSAT
+  countAntom:
+    bin: solvers/countAntom
